@@ -1,0 +1,8 @@
+@font-face {
+    -fx-font-family: "Posterizer KG Rounded";
+    src: url("fonts/Posterizer.ttf");
+}
+
+.label {
+    -fx-font-family: "Posterizer KG Rounded";
+}

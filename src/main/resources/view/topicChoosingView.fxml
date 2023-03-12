@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="background" stylesheets="@../assets/css/background.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ua.dimalustyuk.GuessIt.controller.TopicChoosingController">
+   <bottom>
+      <Button fx:id="programmingButton" mnemonicParsing="false" onAction="#startGame" prefHeight="55.0" prefWidth="150.0" stylesheets="@../assets/css/button.css" text="Обрати" BorderPane.alignment="CENTER">
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="0.0313725508749485" green="0.5490196347236633" blue="0.9882352948188782" />
+               </color>
+            </DropShadow>
+         </effect>
+         <BorderPane.margin>
+            <Insets bottom="15.0" />
+         </BorderPane.margin>
+         <font>
+            <Font name="Verdana" size="20.0" />
+         </font></Button>
+   </bottom>
+   <center>
+      <VBox alignment="CENTER" centerShape="false" prefHeight="258.0" prefWidth="273.0" BorderPane.alignment="CENTER">
+         <children>
+            <RadioButton mnemonicParsing="false" stylesheets="@../assets/css/radioButton.css" text="Об'єктно-орієнтовне програмування" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Verdana" size="22.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="topic" />
+               </toggleGroup>
+               <padding>
+                  <Insets right="45.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </RadioButton>
+            <RadioButton mnemonicParsing="false" stylesheets="@../assets/css/radioButton.css" text="Алгоритми та структури даних" textFill="WHITE" toggleGroup="$topic" wrapText="true">
+               <font>
+                  <Font name="Verdana" size="22.0" />
+               </font>
+               <padding>
+                  <Insets right="45.0" />
+               </padding>
+            </RadioButton>
+            <RadioButton mnemonicParsing="false" stylesheets="@../assets/css/radioButton.css" text="Java" textFill="WHITE" toggleGroup="$topic">
+               <font>
+                  <Font name="Verdana" size="22.0" />
+               </font>
+               <padding>
+                  <Insets right="45.0" />
+               </padding>
+            </RadioButton>
+            <RadioButton mnemonicParsing="false" stylesheets="@../assets/css/radioButton.css" text="Бази даних" textFill="WHITE" toggleGroup="$topic">
+               <font>
+                  <Font name="Verdana" size="22.0" />
+               </font>
+               <padding>
+                  <Insets right="45.0" />
+               </padding>
+            </RadioButton>
+         </children>
+      </VBox>
+   </center>
+   <top>
+      <GridPane prefHeight="86.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" percentWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" percentHeight="100.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="backButton" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#back" prefHeight="74.0" prefWidth="47.0" styleClass="backButton" stylesheets="@../assets/css/backButton.css" text="Button">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin></Button>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="1.0" prefWidth="286.0" stylesheets="@../assets/css/text.css" text="Оберіть тему слів" textFill="WHITE" GridPane.halignment="CENTER">
+               <font>
+                  <Font name="Verdana" size="30.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
+   </top>
+</BorderPane>

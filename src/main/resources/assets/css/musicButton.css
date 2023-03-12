@@ -1,0 +1,13 @@
+.musicButton {
+    -fx-graphic: url('images/switch-off.png');
+    -fx-background-color:transparent;
+    -fx-border-color:transparent;
+    -fx-text-fill:transparent;
+}
+
+.musicButton:selected {
+    -fx-graphic: url('images/switch-on.png');  /*TODO folder design*/
+    -fx-background-color:transparent;
+    -fx-border-color:transparent;
+    -fx-text-fill:transparent;
+}

@@ -1,0 +1,13 @@
+.radio-button .radio, .radio-button:selected .dot {
+    -fx-background-color: transparent; /* remove the circle */
+}
+
+.radio-button, .radio-button:selected{
+    -fx-font-family: "Posterizer KG Rounded";
+    -fx-font-size: 22;
+    -fx-padding-right: 30;
+}
+
+.radio-button:selected {
+    -fx-text-fill: #00cb00; /* change the background color to blue when selected */
+}
