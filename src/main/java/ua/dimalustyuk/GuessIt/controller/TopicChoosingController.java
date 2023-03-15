@@ -33,7 +33,9 @@ public class TopicChoosingController {
 
     @FXML
     void startGame(ActionEvent event) {
-        sceneService.openGameScene(programmingButton);
+        if (topic.getSelectedToggle() != null) {
+            sceneService.openGameScene(programmingButton);
+        }
     }
 
     @FXML

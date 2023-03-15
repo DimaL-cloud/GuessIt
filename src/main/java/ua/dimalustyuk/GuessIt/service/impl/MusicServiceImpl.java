@@ -17,7 +17,8 @@ public class MusicServiceImpl implements MusicService {
             new Media(new File("src/main/resources/assets.music/ChillDay.mp3").toURI().toString()),
             new Media(new File("src/main/resources/assets.music/BetterDays.mp3").toURI().toString()),
             new Media(new File("src/main/resources/assets.music/You-cocabona.mp3").toURI().toString()),
-            new Media(new File("src/main/resources/assets.music/AloneTime.mp3").toURI().toString())
+            new Media(new File("src/main/resources/assets.music/AloneTime.mp3").toURI().toString()),
+            new Media(new File("src/main/resources/assets.music/silent-wood.mp3").toURI().toString())
     );
 
     private int currentSongIndex = 0;

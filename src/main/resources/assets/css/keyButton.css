@@ -1,0 +1,8 @@
+.keyButton {
+    -fx-background-color: #088cfc;
+    -fx-font-family: "Posterizer KG Rounded";
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+    -fx-text-fill: white;
+    -fx-font-size: 16;
+}
