@@ -1,22 +1,21 @@
 package ua.dimalustyuk.GuessIt.controller;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ToggleButton;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
-import ua.dimalustyuk.GuessIt.service.impl.MusicServiceImpl;
 import ua.dimalustyuk.GuessIt.service.SceneService;
+import ua.dimalustyuk.GuessIt.service.impl.MusicService;
 
 @Component
 public class StartMenuController {
-    private final MusicServiceImpl musicService;
+
+    private final MusicService musicService;
     private final SceneService sceneService;
 
     @Autowired
-    public StartMenuController(MusicServiceImpl musicService, SceneService sceneService) {
+    public StartMenuController(MusicService musicService, SceneService sceneService) {
         this.musicService = musicService;
         this.sceneService = sceneService;
     }

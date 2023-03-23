@@ -16,7 +16,7 @@
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="background" stylesheets="@../assets/css/background.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ua.dimalustyuk.GuessIt.controller.TopicChoosingController">
    <bottom>
-      <Button fx:id="programmingButton" mnemonicParsing="false" onAction="#startGame" prefHeight="55.0" prefWidth="150.0" stylesheets="@../assets/css/button.css" text="Обрати" BorderPane.alignment="CENTER">
+      <Button fx:id="wordPickerButton" mnemonicParsing="false" onAction="#pickWord" prefHeight="55.0" prefWidth="150.0" stylesheets="@../assets/css/button.css" text="Обрати" BorderPane.alignment="CENTER">
          <effect>
             <DropShadow>
                <color>
@@ -34,7 +34,7 @@
    <center>
       <VBox alignment="CENTER" centerShape="false" prefHeight="258.0" prefWidth="273.0" BorderPane.alignment="CENTER">
          <children>
-            <RadioButton mnemonicParsing="false" stylesheets="@../assets/css/radioButton.css" text="Об'єктно-орієнтовне програмування" textFill="WHITE" wrapText="true">
+            <RadioButton fx:id="OOP" mnemonicParsing="false" stylesheets="@../assets/css/radioButton.css" text="Об'єктно-орієнтовне програмування" textFill="WHITE" wrapText="true">
                <font>
                   <Font name="Verdana" size="22.0" />
                </font>
@@ -48,7 +48,7 @@
                   <Insets />
                </VBox.margin>
             </RadioButton>
-            <RadioButton mnemonicParsing="false" stylesheets="@../assets/css/radioButton.css" text="Алгоритми та структури даних" textFill="WHITE" toggleGroup="$topic" wrapText="true">
+            <RadioButton fx:id="ADS" mnemonicParsing="false" stylesheets="@../assets/css/radioButton.css" text="Алгоритми та структури даних" textFill="WHITE" toggleGroup="$topic" wrapText="true">
                <font>
                   <Font name="Verdana" size="22.0" />
                </font>
@@ -56,7 +56,7 @@
                   <Insets right="45.0" />
                </padding>
             </RadioButton>
-            <RadioButton mnemonicParsing="false" stylesheets="@../assets/css/radioButton.css" text="Бази даних" textFill="WHITE" toggleGroup="$topic">
+            <RadioButton fx:id="DB" mnemonicParsing="false" stylesheets="@../assets/css/radioButton.css" text="Бази даних" textFill="WHITE" toggleGroup="$topic">
                <font>
                   <Font name="Verdana" size="22.0" />
                </font>
@@ -64,7 +64,7 @@
                   <Insets right="45.0" />
                </padding>
             </RadioButton>
-            <RadioButton mnemonicParsing="false" stylesheets="@../assets/css/radioButton.css" text="Комп'ютерні мережі" textFill="WHITE" toggleGroup="$topic">
+            <RadioButton fx:id="CN" mnemonicParsing="false" stylesheets="@../assets/css/radioButton.css" text="Комп'ютерні мережі" textFill="WHITE" toggleGroup="$topic">
                <font>
                   <Font name="Verdana" size="22.0" />
                </font>
@@ -72,7 +72,7 @@
                   <Insets right="45.0" />
                </padding>
             </RadioButton>
-            <RadioButton mnemonicParsing="false" stylesheets="@../assets/css/radioButton.css" text="Java" textFill="WHITE" toggleGroup="$topic">
+            <RadioButton fx:id="Java" mnemonicParsing="false" stylesheets="@../assets/css/radioButton.css" text="Java" textFill="WHITE" toggleGroup="$topic">
                <font>
                   <Font name="Verdana" size="22.0" />
                </font>

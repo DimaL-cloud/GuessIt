@@ -10,7 +10,6 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationListener;
 import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Component;
-import ua.dimalustyuk.GuessIt.service.MusicService;
 
 import java.io.IOException;
 
@@ -21,12 +20,9 @@ public class StageInitializer implements ApplicationListener<JavaFXApplication.S
 
     private final ApplicationContext applicationContext;
 
-    private final MusicService musicService;
-
     @Autowired
-    public StageInitializer(ApplicationContext applicationContext, MusicService musicService) {
+    public StageInitializer(ApplicationContext applicationContext) {
         this.applicationContext = applicationContext;
-        this.musicService = musicService;
     }
 
     @Override

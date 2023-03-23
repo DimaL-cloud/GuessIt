@@ -1,5 +1,14 @@
 package ua.dimalustyuk.GuessIt;
 
 public enum Topic {
-    OOP, ADS, JAVA, DB
+    OOP("word_topics/OOPWords.properties"),
+    ADS("ADSWords.properties"),
+    JAVA("JavaWords.properties"),
+    DB("DBWords.properties");
+
+    String fileName;
+
+    Topic(String fileName) {
+        this.fileName = fileName;
+    }
 }

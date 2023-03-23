@@ -1,6 +1,5 @@
 package ua.dimalustyuk.GuessIt.controller;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
@@ -68,7 +67,7 @@ public class GameController {
     }
 
     @FXML
-    void back(ActionEvent event) {
+    void back() {
         sceneService.openTopicChoosingScene(backButton);
         hiddenWord.setLength(0);
     }

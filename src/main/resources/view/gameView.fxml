@@ -40,7 +40,7 @@
    <center>
       <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
          <children>
-            <Label fx:id="description" stylesheets="@../assets/css/text.css" text="{Description}" textFill="WHITE" wrapText="true">
+            <Label fx:id="description" stylesheets="@../assets/css/text.css" text="{Description}" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                <font>
                   <Font size="22.0" />
                </font>
@@ -103,14 +103,15 @@
                   <ToggleButton mnemonicParsing="false" styleClass="keyButton" stylesheets="@../assets/css/keyButton.css" text="Д" GridPane.columnIndex="8" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
                   <ToggleButton mnemonicParsing="false" styleClass="keyButton" stylesheets="@../assets/css/keyButton.css" text="Ж" GridPane.columnIndex="9" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
                   <ToggleButton mnemonicParsing="false" styleClass="keyButton" stylesheets="@../assets/css/keyButton.css" text="Є" GridPane.columnIndex="10" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
-                  <ToggleButton layoutX="36.0" layoutY="67.0" mnemonicParsing="false" styleClass="keyButton" stylesheets="@../assets/css/keyButton.css" text="Я" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
-                  <ToggleButton mnemonicParsing="false" styleClass="keyButton" stylesheets="@../assets/css/keyButton.css" text="Ч" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
-                  <ToggleButton mnemonicParsing="false" styleClass="keyButton" stylesheets="@../assets/css/keyButton.css" text="С" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
-                  <ToggleButton mnemonicParsing="false" styleClass="keyButton" stylesheets="@../assets/css/keyButton.css" text="М" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
-                  <ToggleButton mnemonicParsing="false" styleClass="keyButton" stylesheets="@../assets/css/keyButton.css" text="И" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
-                  <ToggleButton mnemonicParsing="false" styleClass="keyButton" stylesheets="@../assets/css/keyButton.css" text="Т" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
-                  <ToggleButton mnemonicParsing="false" styleClass="keyButton" stylesheets="@../assets/css/keyButton.css" text="Ь" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
-                  <ToggleButton mnemonicParsing="false" styleClass="keyButton" stylesheets="@../assets/css/keyButton.css" text="Ю" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                  <ToggleButton layoutX="36.0" layoutY="67.0" mnemonicParsing="false" styleClass="keyButton" stylesheets="@../assets/css/keyButton.css" text="Я" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2" />
+                  <ToggleButton mnemonicParsing="false" styleClass="keyButton" stylesheets="@../assets/css/keyButton.css" text="Ч" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="2" />
+                  <ToggleButton mnemonicParsing="false" styleClass="keyButton" stylesheets="@../assets/css/keyButton.css" text="С" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="2" />
+                  <ToggleButton mnemonicParsing="false" styleClass="keyButton" stylesheets="@../assets/css/keyButton.css" text="М" GridPane.columnIndex="4" GridPane.halignment="LEFT" GridPane.rowIndex="2" />
+                  <ToggleButton mnemonicParsing="false" styleClass="keyButton" stylesheets="@../assets/css/keyButton.css" text="И" GridPane.columnIndex="5" GridPane.halignment="LEFT" GridPane.rowIndex="2" />
+                  <ToggleButton mnemonicParsing="false" styleClass="keyButton" stylesheets="@../assets/css/keyButton.css" text="Т" GridPane.columnIndex="6" GridPane.halignment="LEFT" GridPane.rowIndex="2" />
+                  <ToggleButton mnemonicParsing="false" styleClass="keyButton" stylesheets="@../assets/css/keyButton.css" text="Ь" GridPane.columnIndex="7" GridPane.halignment="LEFT" GridPane.rowIndex="2" />
+                  <ToggleButton mnemonicParsing="false" styleClass="keyButton" stylesheets="@../assets/css/keyButton.css" text="Ю" GridPane.columnIndex="9" GridPane.halignment="LEFT" GridPane.rowIndex="2" />
+                  <ToggleButton mnemonicParsing="false" styleClass="keyButton" stylesheets="@../assets/css/keyButton.css" text="Б" GridPane.columnIndex="8" GridPane.halignment="LEFT" GridPane.rowIndex="2" />
                </children>
             </GridPane>
          </children>

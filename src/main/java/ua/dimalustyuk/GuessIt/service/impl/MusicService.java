@@ -3,7 +3,6 @@ package ua.dimalustyuk.GuessIt.service.impl;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import org.springframework.stereotype.Service;
-import ua.dimalustyuk.GuessIt.service.MusicService;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -12,9 +11,10 @@ import java.util.Collections;
 import java.util.List;
 
 @Service
-public class MusicServiceImpl implements MusicService {
+public class MusicService implements ua.dimalustyuk.GuessIt.service.MusicService {
+
     private final List<Media> playlist = Arrays.asList(
-            new Media(new File("src/main/resources/assets.music/ChillDay.mp3").toURI().toString()),
+            new Media(new File("src/main/resources/assets.music/ChillDay.mp3").toURI().toString()), // TODO in file
             new Media(new File("src/main/resources/assets.music/BetterDays.mp3").toURI().toString()),
             new Media(new File("src/main/resources/assets.music/You-cocabona.mp3").toURI().toString()),
             new Media(new File("src/main/resources/assets.music/AloneTime.mp3").toURI().toString()),
@@ -27,7 +27,7 @@ public class MusicServiceImpl implements MusicService {
 
     private boolean isPlaying = true;
 
-    public MusicServiceImpl() {
+    public MusicService() {
         Collections.shuffle(playlist);
 
         playlist.forEach(media -> players.add(new MediaPlayer(media)));
