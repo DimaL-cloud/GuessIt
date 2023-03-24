@@ -4,4 +4,6 @@ public interface MusicService {
     void play();
 
     void pause();
+
+    boolean isPlaying();
 }

@@ -5,8 +5,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ToggleButton;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import ua.dimalustyuk.GuessIt.service.MusicService;
 import ua.dimalustyuk.GuessIt.service.SceneService;
-import ua.dimalustyuk.GuessIt.service.impl.MusicService;
 
 @Component
 public class StartMenuController {

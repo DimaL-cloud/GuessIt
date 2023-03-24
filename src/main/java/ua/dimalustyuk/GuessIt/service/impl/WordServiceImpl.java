@@ -4,7 +4,7 @@ import org.springframework.stereotype.Service;
 import ua.dimalustyuk.GuessIt.Topic;
 import ua.dimalustyuk.GuessIt.service.WordService;
 
-import java.io.FileInputStream;
+import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
@@ -27,17 +27,16 @@ public class WordServiceImpl implements WordService {
     public String getWord() {
         Properties wordsProperties = new Properties();
 
-        try (InputStreamReader isr = new InputStreamReader(
-                new FileInputStream("src/main/resources/word_topics/" + topic + "Words.properties"), StandardCharsets.UTF_8)
-        ) {
-            wordsProperties.load(isr);
+        try (BufferedReader reader = new BufferedReader(
+                new InputStreamReader(Objects.requireNonNull(getClass().getResourceAsStream("/word_topics/" + topic + "Words.properties")), StandardCharsets.UTF_8))) {
+            wordsProperties.load(reader);
 
             List<String> terms = new ArrayList<>(wordsProperties.stringPropertyNames());
 
             word = terms.get(new Random().nextInt(terms.size()));
             description = wordsProperties.getProperty(word);
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
 
         return word;

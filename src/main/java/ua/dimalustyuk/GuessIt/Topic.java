@@ -6,7 +6,7 @@ public enum Topic {
     JAVA("JavaWords.properties"),
     DB("DBWords.properties");
 
-    String fileName;
+    final String fileName;
 
     Topic(String fileName) {
         this.fileName = fileName;

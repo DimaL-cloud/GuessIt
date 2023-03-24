@@ -6,6 +6,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ToggleButton;
 import javafx.scene.layout.GridPane;
+import javafx.scene.paint.Color;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import ua.dimalustyuk.GuessIt.service.SceneService;
@@ -31,6 +32,8 @@ public class GameController {
 
     private final StringBuilder hiddenWord = new StringBuilder();
 
+    private int lettersLeft;
+
     @Autowired
     public GameController(SceneService sceneService, WordService wordService) {
         this.sceneService = sceneService;
@@ -40,6 +43,7 @@ public class GameController {
     @FXML
     void initialize() {
         String actualWord = wordService.getWord();
+        lettersLeft = actualWord.length();
 
         hiddenWord.append("_".repeat(actualWord.length()));
 
@@ -55,10 +59,15 @@ public class GameController {
                     for (int i = 0; i < actualWord.length(); i++) {
                         if (actualWord.toUpperCase().charAt(i) == letter) {
                             hiddenWord.setCharAt(i, actualWord.charAt(i));
+                            lettersLeft--;
                         }
                     }
 
                     key.setDisable(true);
+
+                    if (lettersLeft == 0) {
+                        word.setTextFill(Color.color(0, 0.896, 0));
+                    }
 
                     word.setText(hiddenWord.toString());
                 });
