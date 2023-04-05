@@ -4,11 +4,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.Scope;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import ua.dimalustyuk.GuessIt.service.SceneService;
 
@@ -17,13 +14,13 @@ import java.io.IOException;
 @Service
 public class SceneServiceImpl implements SceneService {
 
-    @Value("${view.topicChoosingView.path}")
+    @Value("${topic-choosing-view-path}")
     private String topicChoosingViewPath;
 
-    @Value("${view.startMenuView.path}")
+    @Value("${start-menu-view-path}")
     private String startMenuViewPath;
 
-    @Value("${view.gameView.path}")
+    @Value("${game-view-path}")
     private String gameViewPath;
 
     private final ApplicationContext applicationContext;

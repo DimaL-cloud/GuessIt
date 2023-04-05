@@ -15,7 +15,7 @@ import java.io.IOException;
 
 @Component
 public class StageInitializer implements ApplicationListener<JavaFXApplication.StageReadyEvent> {
-    @Value("${view.startMenuView.path}")
+    @Value("${start-menu-view-path}")
     private Resource resource;
 
     private final ApplicationContext applicationContext;
