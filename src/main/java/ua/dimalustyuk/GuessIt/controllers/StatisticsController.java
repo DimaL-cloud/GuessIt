@@ -39,9 +39,17 @@ public class StatisticsController {
         double winsPercent = (double) wins / totalGames * 100;
         double lossesPercent = (double) losses / totalGames * 100;
 
+        String winsPercentRepresentation = "";
+        String lossesPercentRepresentation = "";
+
+        if (totalGames != 0) {
+            winsPercentRepresentation = "(" + String.format("%.2f", winsPercent) + "%)";
+            lossesPercentRepresentation = "(" + String.format("%.2f", lossesPercent) + "%)";
+        }
+
         gamesAmountLabel.setText(String.valueOf(totalGames));
-        winsAmountLabel.setText(wins + " (" + String.format("%.2f", winsPercent) + "%)");
-        lossesAmountLabel.setText(losses + " (" + String.format("%.2f", lossesPercent) + "%)");
+        winsAmountLabel.setText(wins + " " + winsPercentRepresentation);
+        lossesAmountLabel.setText(losses + " " + lossesPercentRepresentation);
     }
 
     @FXML
