@@ -1,4 +1,4 @@
-package ua.dimalustyuk.GuessIt.service.impl;
+package ua.dimalustyuk.GuessIt.services.impl;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -7,7 +7,7 @@ import javafx.stage.Stage;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Service;
-import ua.dimalustyuk.GuessIt.service.SceneService;
+import ua.dimalustyuk.GuessIt.services.SceneService;
 
 import java.io.IOException;
 
@@ -23,6 +23,9 @@ public class SceneServiceImpl implements SceneService {
     @Value("${game-view-path}")
     private String gameViewPath;
 
+    @Value("${statistics-view-path}")
+    private String statisticsViewPath;
+
     private final ApplicationContext applicationContext;
 
     public SceneServiceImpl(ApplicationContext applicationContext) {
@@ -30,7 +33,7 @@ public class SceneServiceImpl implements SceneService {
     }
 
     @Override
-    public void openStartMenuView(Node node) {
+    public void openStartMenuScene(Node node) {
         openNewScene(node, startMenuViewPath);
     }
 
@@ -45,7 +48,11 @@ public class SceneServiceImpl implements SceneService {
     }
 
     @Override
-    public void openNewScene(Node node, String viewPath) {
+    public void openStatisticsScene(Node node) {
+        openNewScene(node, statisticsViewPath);
+    }
+
+    private void openNewScene(Node node, String viewPath) {
         Scene scene = node.getScene();
 
         Stage window = (Stage) node.getScene().getWindow();

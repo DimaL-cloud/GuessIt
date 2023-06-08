@@ -3,6 +3,7 @@ package ua.dimalustyuk.GuessIt;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -36,6 +37,7 @@ public class StageInitializer implements ApplicationListener<JavaFXApplication.S
             Stage stage = event.getStage();
 
             Scene scene = new Scene(parent, 720, 480);
+            stage.getIcons().add(new Image("assets/css/images/icon.png"));
 
             stage.setMinWidth(720);
             stage.setMinHeight(500);

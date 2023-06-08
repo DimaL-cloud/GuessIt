@@ -1,10 +1,10 @@
-package ua.dimalustyuk.GuessIt.service.impl;
+package ua.dimalustyuk.GuessIt.services.impl;
 
 import javafx.scene.media.MediaPlayer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import ua.dimalustyuk.GuessIt.config.MusicPlayerListConfig;
-import ua.dimalustyuk.GuessIt.service.MusicService;
+import ua.dimalustyuk.GuessIt.services.MusicService;
 
 import java.util.*;
 

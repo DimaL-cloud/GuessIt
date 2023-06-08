@@ -11,19 +11,20 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="background" stylesheets="@../assets/css/background.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ua.dimalustyuk.GuessIt.controller.GameController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="background" stylesheets="@../assets/css/background.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ua.dimalustyuk.GuessIt.controllers.GameController">
    <top>
       <GridPane BorderPane.alignment="CENTER">
         <columnConstraints>
             <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" percentWidth="37.0" />
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" percentWidth="83.0" />
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" percentWidth="47.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" percentWidth="57.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" percentWidth="37.0" prefWidth="100.0" />
         </columnConstraints>
         <rowConstraints>
           <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" percentHeight="100.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Label prefHeight="36.0" prefWidth="127.0" stylesheets="@../assets/css/text.css" text="Спроби:" textFill="WHITE" GridPane.columnIndex="1">
+            <Label prefHeight="36.0" prefWidth="119.0" stylesheets="@../assets/css/text.css" text="Спроби:" textFill="WHITE" GridPane.columnIndex="1">
                <font>
                   <Font size="30.0" />
                </font>
@@ -33,14 +34,25 @@
                   <Font size="30.0" />
                </font>
             </Label>
-            <Button fx:id="backButton" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#back" prefHeight="86.0" prefWidth="91.0" styleClass="backButton" stylesheets="@../assets/css/backButton.css" text="Button" />
+            <Button fx:id="backButton" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#back" prefHeight="86.0" prefWidth="95.0" styleClass="backButton" stylesheets="@../assets/css/backButton.css" text="Button" />
+            <Label fx:id="attemptsLabel" prefHeight="36.0" prefWidth="10.0" stylesheets="@../assets/css/text.css" text="5" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <Button fx:id="nextButton" disable="true" mnemonicParsing="false" onAction="#next" prefHeight="74.0" prefWidth="60.0" styleClass="backButton" stylesheets="@../assets/css/next-button.css" text="Button" GridPane.columnIndex="3" GridPane.halignment="RIGHT" />
+            <Label fx:id="timerLabel" stylesheets="@../assets/css/text.css" text="{time}" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="RIGHT">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
          </children>
       </GridPane>
    </top>
    <center>
       <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
          <children>
-            <Label fx:id="description" alignment="CENTER" prefHeight="134.0" prefWidth="601.0" stylesheets="@../assets/css/text.css" text="{Description}" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+            <Label fx:id="descriptionLabel" alignment="CENTER" prefHeight="171.0" prefWidth="600.0" stylesheets="@../assets/css/text.css" text="{Description}" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                <font>
                   <Font size="22.0" />
                </font>
@@ -48,7 +60,7 @@
                   <Insets bottom="20.0" />
                </padding>
             </Label>
-            <Label fx:id="word" stylesheets="@../assets/css/text.css" text="{Word}" textFill="WHITE" wrapText="true">
+            <Label fx:id="wordLabel" stylesheets="@../assets/css/text.css" text="{Word}" textFill="WHITE" wrapText="true">
                <font>
                   <Font size="29.0" />
                </font>

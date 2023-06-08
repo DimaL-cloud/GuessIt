@@ -1,12 +1,12 @@
-package ua.dimalustyuk.GuessIt.controller;
+package ua.dimalustyuk.GuessIt.controllers;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ToggleButton;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import ua.dimalustyuk.GuessIt.service.MusicService;
-import ua.dimalustyuk.GuessIt.service.SceneService;
+import ua.dimalustyuk.GuessIt.services.MusicService;
+import ua.dimalustyuk.GuessIt.services.SceneService;
 
 @Component
 public class StartMenuController {
@@ -32,7 +32,7 @@ public class StartMenuController {
     }
 
     @FXML
-    void startGame() { // TODO change name
+    void startGame() {
         sceneService.openTopicChoosingScene(startGameButton);
     }
 
@@ -41,5 +41,10 @@ public class StartMenuController {
         if (musicButton.isSelected()) {
             musicService.play();
         } else musicService.pause();
+    }
+
+    @FXML
+    void showStatistics() {
+        sceneService.openStatisticsScene(startGameButton);
     }
 }

@@ -1,4 +1,4 @@
-package ua.dimalustyuk.GuessIt.service;
+package ua.dimalustyuk.GuessIt.services;
 
 public interface MusicService {
     void play();

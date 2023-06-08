@@ -12,7 +12,7 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="720.0" styleClass="background" stylesheets="@../assets/css/background.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ua.dimalustyuk.GuessIt.controller.StartMenuController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="720.0" styleClass="background" stylesheets="@../assets/css/background.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ua.dimalustyuk.GuessIt.controllers.StartMenuController">
    <top>
       <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="86.0" prefWidth="252.0" stylesheets="@../assets/css/text.css" text="GuessIt" textAlignment="CENTER" textFill="WHITE" BorderPane.alignment="CENTER">
          <font>
@@ -20,21 +20,14 @@
          </font>
       </Label>
    </top>
-   <bottom>
-      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="118.0" prefWidth="508.0" stylesheets="@../assets/css/text.css" text="Вітаю у грі GuessIt! Ваше завдання - відгадати слово за його значенням за певний проміжок часу та кількість спроб. Ви можете обирати тему слів. Щасливої гри!" textAlignment="CENTER" textFill="WHITE" wrapText="true" BorderPane.alignment="CENTER">
-         <font>
-            <Font name="Verdana" size="18.0" />
-         </font>
-      </Label>
-   </bottom>
    <center>
-      <GridPane BorderPane.alignment="CENTER">
+      <GridPane alignment="CENTER" BorderPane.alignment="CENTER">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
         </columnConstraints>
         <rowConstraints>
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="128.59998168945313" minHeight="10.0" prefHeight="121.39999237060547" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="145.40000762939454" minHeight="10.0" prefHeight="145.40000762939454" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
             <Button fx:id="startGameButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#startGame" prefWidth="214.0" stylesheets="@../assets/css/button.css" text="Почати гру" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
@@ -59,4 +52,22 @@
          </children>
       </GridPane>
    </center>
+   <bottom>
+      <GridPane prefHeight="127.0" prefWidth="720.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="118.0" prefWidth="494.0" stylesheets="@../assets/css/text.css" text="Вітаю у грі GuessIt! Ваше завдання - відгадати слово за його значенням за певний проміжок часу та кількість спроб з теми Computer Science. Ви можете обирати тему слів. Щасливої гри!" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Verdana" size="18.0" />
+               </font>
+            </Label>
+            <Button mnemonicParsing="false" onAction="#showStatistics" prefHeight="106.0" prefWidth="89.0" styleClass="backButton" stylesheets="@../assets/css/statistics-button.css" text="Button" GridPane.halignment="RIGHT" />
+         </children>
+      </GridPane>
+   </bottom>
 </BorderPane>

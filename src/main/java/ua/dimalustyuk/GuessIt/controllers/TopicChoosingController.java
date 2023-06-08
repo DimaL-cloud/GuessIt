@@ -1,4 +1,4 @@
-package ua.dimalustyuk.GuessIt.controller;
+package ua.dimalustyuk.GuessIt.controllers;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -6,9 +6,9 @@ import javafx.scene.control.RadioButton;
 import javafx.scene.control.ToggleGroup;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import ua.dimalustyuk.GuessIt.Topic;
-import ua.dimalustyuk.GuessIt.service.SceneService;
-import ua.dimalustyuk.GuessIt.service.WordService;
+import ua.dimalustyuk.GuessIt.entities.enums.Topic;
+import ua.dimalustyuk.GuessIt.services.SceneService;
+import ua.dimalustyuk.GuessIt.services.WordService;
 
 @Component
 public class TopicChoosingController {
@@ -31,21 +31,18 @@ public class TopicChoosingController {
     private Button wordPickerButton;
 
     @FXML
-    void initialize() {
-
-    }
-
-    @FXML
     void pickWord() {
         if (topic.getSelectedToggle() != null) {
-            wordService.setTopic(Topic.valueOf(((RadioButton) topic.getSelectedToggle()).getId()));
+            Topic selectedTopic = Topic.valueOf(((RadioButton) topic.getSelectedToggle()).getId());
+
+            wordService.setTopic(selectedTopic);
+            wordService.pickRandomWord(selectedTopic);
             sceneService.openGameScene(wordPickerButton);
         }
     }
 
     @FXML
     void back() {
-        sceneService.openStartMenuView(backButton);
+        sceneService.openStartMenuScene(backButton);
     }
-
 }

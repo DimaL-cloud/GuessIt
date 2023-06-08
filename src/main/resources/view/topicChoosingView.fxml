@@ -14,7 +14,7 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="background" stylesheets="@../assets/css/background.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ua.dimalustyuk.GuessIt.controller.TopicChoosingController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="background" stylesheets="@../assets/css/background.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ua.dimalustyuk.GuessIt.controllers.TopicChoosingController">
    <bottom>
       <Button fx:id="wordPickerButton" mnemonicParsing="false" onAction="#pickWord" prefHeight="55.0" prefWidth="150.0" stylesheets="@../assets/css/button.css" text="Обрати" BorderPane.alignment="CENTER">
          <effect>
@@ -72,7 +72,31 @@
                   <Insets right="45.0" />
                </padding>
             </RadioButton>
-            <RadioButton fx:id="Java" mnemonicParsing="false" stylesheets="@../assets/css/radioButton.css" text="Java" textFill="WHITE" toggleGroup="$topic">
+            <RadioButton fx:id="AI" mnemonicParsing="false" stylesheets="@../assets/css/radioButton.css" text="Штучний інтелект" textFill="WHITE" toggleGroup="$topic">
+               <font>
+                  <Font name="Verdana" size="22.0" />
+               </font>
+               <padding>
+                  <Insets right="45.0" />
+               </padding>
+            </RadioButton>
+            <RadioButton fx:id="CS" mnemonicParsing="false" stylesheets="@../assets/css/radioButton.css" text="Кібербезпека" textFill="WHITE" toggleGroup="$topic">
+               <font>
+                  <Font name="Verdana" size="22.0" />
+               </font>
+               <padding>
+                  <Insets right="45.0" />
+               </padding>
+            </RadioButton>
+            <RadioButton fx:id="WD" mnemonicParsing="false" stylesheets="@../assets/css/radioButton.css" text="Веб-розробка" textFill="WHITE" toggleGroup="$topic">
+               <font>
+                  <Font name="Verdana" size="22.0" />
+               </font>
+               <padding>
+                  <Insets right="45.0" />
+               </padding>
+            </RadioButton>
+            <RadioButton fx:id="OS" mnemonicParsing="false" stylesheets="@../assets/css/radioButton.css" text="Операційні системи" textFill="WHITE" toggleGroup="$topic">
                <font>
                   <Font name="Verdana" size="22.0" />
                </font>
